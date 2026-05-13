@@ -1,4 +1,4 @@
-# CMDKF
+# CMDKF Submitted to "Bioinformatics"
 
 ## 1. Overview
 The code for paper "Causal metapath and domain knowledge fusion for predicting miRNA-drug-disease triplet resistance and sensitivity associations". The repository is organized as follows:
