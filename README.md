@@ -1,7 +1,7 @@
-# CMDKF Submitted to "Bioinformatics"
+# MTDKF Submitted to "Briefings in Bioinformatics"
 
 ## 1. Overview
-The code for paper "Causal metapath and domain knowledge fusion for predicting miRNA-drug-disease triplet resistance and sensitivity associations". The repository is organized as follows:
+The code for paper "Metapath-guided topology and domain knowledge fusion for predicting miRNA-drug-disease triplet resistance and sensitivity associations". The repository is organized as follows:
 
 + `data/MDR_data/MDS_data` contains the data in the paper:
   * `m_r_d_pos_pairs.txt` contains known miRNA-drug-disease triple resistance and sensitivity associations;
