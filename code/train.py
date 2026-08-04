@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from model import CMDKF
+from model import MTDKF
 from utils_ import *
 import warnings
 import torch_geometric
@@ -14,7 +14,7 @@ def Train(train_data, test_data, in_size, args, hg, features, att_input):
     shuffle_index = np.random.choice(range(len(test_data)), len(test_data), replace=False)
     task_test_data = test_data[shuffle_index]
 
-    model = CMDKF(
+    model = MTDKF(
         meta_paths=args.metapaths,
         test_data=val_data_pos,
         in_size=in_size,
