@@ -191,9 +191,9 @@ class SemanticEncoder(nn.Module):
         return metapath_embedding
 
 
-class CMDKF_Layer(nn.Module):
+class MTDKF_Layer(nn.Module):
     def __init__(self, meta_paths, test_data, hidden_size, r_vec, layer_num_heads, dropout, etypes, name):
-        super(CMDKF_Layer, self).__init__()
+        super(MTDKF_Layer, self).__init__()
         self.num_heads = layer_num_heads
         self.meta_paths = list(tuple(meta_path) for meta_path in meta_paths)
         self._cached_graph = None
@@ -296,9 +296,9 @@ class CMDKF_Layer(nn.Module):
 
         return nodes_embeddings
 
-class CMDKF(nn.Module):
+class MTDKF(nn.Module):
     def __init__(self, meta_paths, test_data, in_size, hidden_size, num_heads, dropout, etypes):
-        super(CMDKF, self).__init__()
+        super(MTDKF, self).__init__()
         self.hidden_size = hidden_size
         self.num_heads = num_heads
 
@@ -325,7 +325,7 @@ class CMDKF(nn.Module):
 
         r_vec = nn.Parameter(torch.empty(size=(3, self.hidden_size // 2, 2)))
 
-        self.layers1 = CMDKF_Layer(meta_paths, test_data, hidden_size, r_vec, num_heads, dropout, etypes,
+        self.layers1 = MTDKF_Layer(meta_paths, test_data, hidden_size, r_vec, num_heads, dropout, etypes,
                                     name=['mi', 'dr', 'di'])
 
         self.predict.apply(self.weights_init)
