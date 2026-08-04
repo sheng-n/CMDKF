@@ -18,7 +18,7 @@ The code for paper "Metapath-guided topology and domain knowledge fusion for pre
   * `data_splits.py`contains the 5-fold cv and independent test set splits;
   * `utils_.py`contains matrics, parameters;
   * `data_process.py` contains the preprocess of data;
-  * `model.py` contains CMDKF's model layer;
+  * `model.py` contains MTDKF's model layer;
   * `train.py` contains training and testing code;
   * `main.py` runs code;
   
